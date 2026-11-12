@@ -1,0 +1,10 @@
+{
+	"id": "dark-sites",
+	"name": "Тёмные сайты",
+	"version": "1.0.0",
+	"description": "Делает светлые сайты тёмными. Включается отдельно для каждого сайта, картинки и видео остаются в своих цветах.",
+	"icon": "🌙",
+	"permissions": ["storage", "tabs"],
+	"content": [{ "matches": ["<all_urls>"], "js": ["content.js"], "runAt": "start" }],
+	"button": { "title": "Тёмная тема для этого сайта", "popup": "popup.html" }
+}

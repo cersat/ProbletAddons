@@ -1,0 +1,9 @@
+{
+	"id": "tab-sessions",
+	"name": "Наборы вкладок",
+	"version": "1.0.0",
+	"description": "Сохраняет открытые вкладки набором и открывает их снова одним нажатием.",
+	"icon": "🗂",
+	"permissions": ["storage", "tabs"],
+	"button": { "title": "Наборы вкладок", "popup": "popup.html" }
+}

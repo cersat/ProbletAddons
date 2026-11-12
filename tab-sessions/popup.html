@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<style>
+	body { margin: 0; width: 340px; padding: 14px 16px; background: #1c1c25; color: #e8e8f0; font: 14px/1.4 system-ui, sans-serif; }
+	h1 { margin: 0 0 10px; font-size: 15px; }
+	.row { display: flex; gap: 8px; }
+	input { flex: 1; min-width: 0; padding: 8px; border: 1px solid #3a3a50; border-radius: 8px; background: #16161d; color: #e8e8f0; font: inherit; }
+	button { padding: 8px 10px; border: 1px solid #3a3a50; border-radius: 8px; background: #2a2a38; color: #e8e8f0; font: inherit; cursor: pointer; }
+	button.primary { background: #a6b4ff; border-color: #a6b4ff; color: #16161d; font-weight: 600; }
+	button.del { color: #f2929a; }
+	ul { list-style: none; margin: 12px 0 0; padding: 0; max-height: 340px; overflow-y: auto; }
+	li { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-top: 1px solid #2e2e3e; }
+	li .what { flex: 1; min-width: 0; }
+	li b { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+	li small { color: #9a9ab0; }
+	.empty { color: #9a9ab0; font-size: 13px; margin-top: 12px; }
+</style>
+</head>
+<body>
+	<h1>Наборы вкладок</h1>
+	<div class="row"><input id="name" placeholder="Название набора" maxlength="60"><button class="primary" id="save">Сохранить</button></div>
+	<ul id="list"></ul>
+	<script src="popup.js"></script>
+</body>
+</html>
