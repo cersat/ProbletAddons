@@ -1,4 +1,9 @@
 const $ = (id) => document.getElementById(id);
+// Язык интерфейса браузера: problet.lang — 'ru' или 'en'
+const L = (ru, en) => (problet.lang === 'en' ? en : ru);
+$('cmd').placeholder = L('Команда, например: ls -la', 'Command, for example: ls -la');
+$('go').textContent = L('Выполнить', 'Run');
+$('meta').textContent = L('↑ ↓ — прошлые команды', '↑ ↓ — previous commands');
 let history = [];
 let pos = -1;
 problet.storage.get('history').then((h) => { history = Array.isArray(h) ? h : []; });
@@ -22,8 +27,8 @@ $('f').addEventListener('submit', async (e) => {
 			s.textContent = r.stderr;
 			$('out').append(s);
 		}
-		if (!r.stdout && !r.stderr) $('out').textContent = '(нет вывода)';
-		$('meta').textContent = 'Код выхода ' + r.code + ' · ' + ((Date.now() - start) / 1000).toFixed(1) + ' с';
+		if (!r.stdout && !r.stderr) $('out').textContent = L('(нет вывода)', '(no output)');
+		$('meta').textContent = L('Код выхода ', 'Exit code ') + r.code + ' · ' + ((Date.now() - start) / 1000).toFixed(1) + L(' с', ' s');
 	} catch (err) {
 		$('out').innerHTML = '';
 		const s = document.createElement('span');

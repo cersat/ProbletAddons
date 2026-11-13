@@ -3,6 +3,7 @@
 	"name": "Страница в Markdown",
 	"version": "1.0.0",
 	"description": "Сохраняет текст открытой страницы в файл Markdown: заголовки, списки, ссылки, код и таблицы.",
+	"locales": { "en": {"name": "Page as Markdown", "description": "Saves the text of the open page to a Markdown file: headings, lists, links, code and tables.", "buttonTitle": "Save page as Markdown"} },
 	"icon": "📝",
 	"permissions": ["tabs", "pages", "files", "notifications"],
 	"background": "background.js",

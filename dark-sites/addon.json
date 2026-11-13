@@ -3,6 +3,7 @@
 	"name": "Тёмные сайты",
 	"version": "1.0.0",
 	"description": "Делает светлые сайты тёмными. Включается отдельно для каждого сайта, картинки и видео остаются в своих цветах.",
+	"locales": { "en": {"name": "Dark Sites", "description": "Makes light sites dark. Turned on separately for each site; images and videos keep their own colors.", "buttonTitle": "Dark theme for this site"} },
 	"icon": "🌙",
 	"permissions": ["storage", "tabs"],
 	"content": [{ "matches": ["<all_urls>"], "js": ["content.js"], "runAt": "start" }],

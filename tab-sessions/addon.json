@@ -3,6 +3,7 @@
 	"name": "Наборы вкладок",
 	"version": "1.0.0",
 	"description": "Сохраняет открытые вкладки набором и открывает их снова одним нажатием.",
+	"locales": { "en": {"name": "Tab Sets", "description": "Saves the open tabs as a set and reopens them with one click.", "buttonTitle": "Tab sets"} },
 	"icon": "🗂",
 	"permissions": ["storage", "tabs"],
 	"button": { "title": "Наборы вкладок", "popup": "popup.html" }

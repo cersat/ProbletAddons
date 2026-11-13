@@ -1,3 +1,5 @@
+**Русский** · [English](README.en.md)
+
 # Аддоны Problet
 
 Каталог аддонов для браузера [Problet](https://github.com/cersat/Problet). Каждый аддон — папка с файлом `addon.json` и файлами рядом с ним. Список аддонов, который показывает браузер, лежит в `index.json`.
@@ -31,6 +33,7 @@
 	"name": "Мой аддон",
 	"version": "1.0.0",
 	"description": "Что он делает",
+	"locales": { "en": { "name": "My addon", "description": "What it does", "buttonTitle": "Button hint" } },
 	"icon": "🧩",
 	"permissions": ["storage", "tabs"],
 	"content": [{ "matches": ["*://*.example.com/*"], "js": ["content.js"], "css": ["content.css"], "runAt": "end" }],
@@ -42,6 +45,7 @@
 ```
 
 - `id` — латинские буквы, цифры и дефис, до 40 символов. Совпадает с названием папки в каталоге.
+- `locales` — по желанию: название, описание и подсказка кнопки на других языках (пока `en`). Если язык интерфейса Problet английский, браузер показывает их вместо основных. Свои надписи аддон переводит сам по `problet.lang`.
 - `icon` — эмодзи или символ (до 4 знаков) либо путь к `.svg` или `.png`.
 - `content` — скрипты и стили для страниц сайтов. `matches` — шаблоны как у расширений Chrome: `<all_urls>`, `*://*/*`, `https://*.site.ru/path*`. `runAt`: `start` (до скриптов страницы), `end` (DOM готов, по умолчанию), `idle` (страница загрузилась). Скрипты работают в отдельном мире: DOM общий со страницей, а переменные страницы не видны.
 - `background` — фоновый скрипт, работает всё время, пока открыт браузер.
@@ -75,6 +79,7 @@
 В фоне и на страницах аддона (окошко кнопки, настройки) есть объект `problet`. Все методы возвращают Promise.
 
 ```js
+problet.lang                            // язык интерфейса браузера: 'ru' или 'en' (не метод, а строка)
 problet.info()                          // { id, name, version, permissions, problet, platform }
 problet.on(name, fn)                    // события: buttonClick, message, tabCreated, tabUpdated, tabActivated, tabClosed
 problet.storage.get(key?) / set(key, value) / remove(key)
@@ -100,6 +105,7 @@ problet.openOptions()
 
 ```js
 problet.id
+problet.lang                // 'ru' или 'en'
 problet.send(message)       // в фон аддона, ответ — то, что вернул обработчик message
 problet.onMessage(fn)       // сообщения из фона (tabs.send)
 problet.storage.get(key) / set(key, value)   // если есть разрешение storage
@@ -110,5 +116,5 @@ problet.storage.get(key) / set(key, value)   // если есть разреше
 Положи папку аддона в корень репозитория и добавь запись в `index.json`:
 
 ```json
-{ "id": "my-addon", "name": "Мой аддон", "version": "1.0.0", "description": "…", "icon": "🧩", "path": "my-addon/" }
+{ "id": "my-addon", "name": "Мой аддон", "version": "1.0.0", "description": "…", "locales": { "en": { "name": "My addon", "description": "…" } }, "icon": "🧩", "path": "my-addon/" }
 ```

@@ -5,6 +5,7 @@
 			"name": "Тёмные сайты",
 			"version": "1.0.0",
 			"description": "Делает светлые сайты тёмными. Включается отдельно для каждого сайта, картинки и видео остаются в своих цветах.",
+			"locales": {"en": {"name": "Dark Sites", "description": "Makes light sites dark. Turned on separately for each site; images and videos keep their own colors."}},
 			"icon": "🌙",
 			"path": "dark-sites/"
 		},
@@ -13,6 +14,7 @@
 			"name": "Время чтения",
 			"version": "1.0.0",
 			"description": "На длинных статьях показывает в углу, сколько минут займёт чтение. Нажатие прячет подсказку.",
+			"locales": {"en": {"name": "Reading Time", "description": "On long articles, shows in the corner how many minutes reading will take. Clicking hides the hint."}},
 			"icon": "⏱",
 			"path": "reading-time/"
 		},
@@ -21,6 +23,7 @@
 			"name": "Наборы вкладок",
 			"version": "1.0.0",
 			"description": "Сохраняет открытые вкладки набором и открывает их снова одним нажатием.",
+			"locales": {"en": {"name": "Tab Sets", "description": "Saves the open tabs as a set and reopens them with one click."}},
 			"icon": "🗂",
 			"path": "tab-sessions/"
 		},
@@ -29,6 +32,7 @@
 			"name": "Страница в Markdown",
 			"version": "1.0.0",
 			"description": "Сохраняет текст открытой страницы в файл Markdown: заголовки, списки, ссылки, код и таблицы.",
+			"locales": {"en": {"name": "Page as Markdown", "description": "Saves the text of the open page to a Markdown file: headings, lists, links, code and tables."}},
 			"icon": "📝",
 			"path": "page-markdown/"
 		},
@@ -37,6 +41,7 @@
 			"name": "Скорость видео",
 			"version": "1.0.0",
 			"description": "Клавиши для любого видео на сайтах: ] быстрее, [ медленнее, \\ обычная скорость, ' перемотка на 10 секунд вперёд, ; назад. Скорость запоминается.",
+			"locales": {"en": {"name": "Video Speed", "description": "Keys for any video on sites: ] faster, [ slower, \\ normal speed, ' skip 10 seconds forward, ; back. The speed is remembered."}},
 			"icon": "⏩",
 			"path": "video-speed/"
 		},
@@ -45,6 +50,7 @@
 			"name": "Быстрая команда",
 			"version": "1.0.0",
 			"description": "Окошко на панели, где можно выполнить команду в системе и сразу увидеть вывод. Каждую команду браузер спросит отдельно, если не разрешить навсегда.",
+			"locales": {"en": {"name": "Quick Command", "description": "A popup on the bar where you can run a system command and see its output right away. The browser asks about every command separately unless you allow it forever."}},
 			"icon": ">_",
 			"path": "terminal/"
 		}

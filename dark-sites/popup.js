@@ -1,4 +1,7 @@
 const $ = (id) => document.getElementById(id);
+// Язык интерфейса браузера: problet.lang — 'ru' или 'en'
+const L = (ru, en) => (problet.lang === 'en' ? en : ru);
+document.querySelector('h1').textContent = L('Тёмная тема', 'Dark theme');
 (async () => {
 	const tab = await problet.tabs.active();
 	let host = '';
@@ -9,13 +12,13 @@ const $ = (id) => document.getElementById(id);
 	const sites = (await problet.storage.get('sites')) || {};
 	const show = () => {
 		const on = !!sites[host];
-		$('toggle').textContent = on ? 'Выключить для этого сайта' : 'Включить для этого сайта';
+		$('toggle').textContent = on ? L('Выключить для этого сайта', 'Turn off for this site') : L('Включить для этого сайта', 'Turn on for this site');
 		$('toggle').className = on ? 'on' : '';
 		const n = Object.keys(sites).length;
-		$('count').textContent = n ? 'Тёмных сайтов: ' + n : '';
+		$('count').textContent = n ? L('Тёмных сайтов: ', 'Dark sites: ') + n : '';
 	};
 	if (!host) {
-		$('host').textContent = 'Это не сайт: здесь тема не включается';
+		$('host').textContent = L('Это не сайт: здесь тема не включается', 'This is not a site: the theme cannot be turned on here');
 		return;
 	}
 	$('host').textContent = host;

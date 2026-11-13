@@ -1,3 +1,5 @@
+// Язык интерфейса браузера: problet.lang — 'ru' или 'en'
+const L = (ru, en) => (problet.lang === 'en' ? en : ru);
 // Нажатие на кнопку: забираем со страницы Markdown, спрашиваем, куда сохранить, и пишем файл
 
 // Эта функция выполняется на самой странице (через tabs.eval), поэтому всё нужное лежит внутри неё
@@ -64,17 +66,17 @@ function toMarkdown() {
 problet.on('buttonClick', async () => {
 	const tab = await problet.tabs.active();
 	if (!tab || !/^(https?|file):/.test(tab.url)) {
-		await problet.notify('Страница в Markdown', 'Открой обычную страницу сайта');
+		await problet.notify(L('Страница в Markdown', 'Page as Markdown'), L('Открой обычную страницу сайта', 'Open a regular web page'));
 		return;
 	}
 	try {
 		const md = await problet.tabs.eval(tab.id, '(' + toMarkdown.toString() + ')()');
-		const name = (tab.title || 'страница').replace(/[\\/:*?"<>|]+/g, ' ').trim().slice(0, 80) + '.md';
+		const name = (tab.title || L('страница', 'page')).replace(/[\\/:*?"<>|]+/g, ' ').trim().slice(0, 80) + '.md';
 		const file = await problet.files.pick({ save: true, name });
 		if (!file) return;
 		await problet.files.write(file, md);
-		await problet.notify('Страница сохранена', file);
+		await problet.notify(L('Страница сохранена', 'Page saved'), file);
 	} catch (e) {
-		await problet.notify('Не получилось сохранить', String(e.message || e).replace(/^Error invoking remote method '[^']*': (Error: )?/, ''));
+		await problet.notify(L('Не получилось сохранить', 'Could not save'), String(e.message || e).replace(/^Error invoking remote method '[^']*': (Error: )?/, ''));
 	}
 });

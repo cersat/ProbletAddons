@@ -52,8 +52,8 @@
 		if (e.key === ']') setSpeed(speed + (speed >= 2 ? 0.25 : 0.1));
 		else if (e.key === '[') setSpeed(speed - (speed > 2 ? 0.25 : 0.1));
 		else if (e.key === '\\') setSpeed(1);
-		else if (e.key === "'") { v.currentTime = Math.min(v.duration || Infinity, v.currentTime + 10); show('+10 с', v); }
-		else if (e.key === ';') { v.currentTime = Math.max(0, v.currentTime - 10); show('−10 с', v); }
+		else if (e.key === "'") { v.currentTime = Math.min(v.duration || Infinity, v.currentTime + 10); show(problet.lang === 'en' ? '+10 s' : '+10 с', v); }
+		else if (e.key === ';') { v.currentTime = Math.max(0, v.currentTime - 10); show(problet.lang === 'en' ? '−10 s' : '−10 с', v); }
 		else done = false;
 		if (done) {
 			e.preventDefault();
