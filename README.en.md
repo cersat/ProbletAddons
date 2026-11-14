@@ -24,6 +24,9 @@ Before installing, the browser shows what the addon will be able to do. Installe
 | 📝 Page as Markdown | Save a page to an .md file | tabs, pages, files, notifications |
 | ⏩ Video Speed | Speed and seek keys for any video | storage |
 | >_ Quick Command | Run a system command right from the bar | exec, storage |
+| 📖 Reading Mode | Clean article text without menus and ads, font size, width and theme | storage, tabs |
+| ⬇ Download Images and Videos | A list of the page’s images and videos, saving the chosen ones to a folder | tabs, pages, network, files |
+| { } JSON | JSON pages as a tree: collapsing, search, copying a value or a path | — |
 
 ## The addon.json format
 

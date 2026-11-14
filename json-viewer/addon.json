@@ -1,0 +1,9 @@
+{
+	"id": "json-viewer",
+	"name": "JSON",
+	"version": "1.0.0",
+	"description": "Когда страница — это JSON, показывает его деревом: сворачиваемые блоки, подсветка типов, поиск, копирование значения и пути. Исходный текст можно вернуть одной кнопкой.",
+	"locales": { "en": {"name": "JSON", "description": "When a page is JSON, shows it as a tree: collapsible blocks, type highlighting, search, copying a value or a path. The original text comes back with one button."} },
+	"icon": "{ }",
+	"content": [{ "matches": ["<all_urls>"], "js": ["content.js"], "runAt": "end" }]
+}

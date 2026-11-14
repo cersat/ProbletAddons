@@ -1,0 +1,12 @@
+{
+	"id": "reading-mode",
+	"name": "Режим чтения",
+	"version": "1.0.0",
+	"description": "Кнопка на панели превращает страницу в чистый текст статьи: без меню, рекламы и боковых блоков. Размер шрифта, ширина колонки и тема настраиваются и запоминаются. Esc закрывает режим.",
+	"locales": { "en": {"name": "Reading Mode", "description": "A button on the bar turns the page into clean article text: no menus, ads or side blocks. Font size, column width and theme are adjustable and remembered. Esc closes the mode.", "buttonTitle": "Reading mode"} },
+	"icon": "📖",
+	"permissions": ["storage", "tabs"],
+	"content": [{ "matches": ["<all_urls>"], "js": ["content.js"], "runAt": "end" }],
+	"background": "background.js",
+	"button": { "title": "Режим чтения" }
+}
