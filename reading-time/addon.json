@@ -1,9 +1,9 @@
 {
 	"id": "reading-time",
 	"name": "Время чтения",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "На длинных статьях показывает в углу, сколько минут займёт чтение. Нажатие прячет подсказку.",
 	"locales": { "en": {"name": "Reading Time", "description": "On long articles, shows in the corner how many minutes reading will take. Clicking hides the hint."} },
-	"icon": "⏱",
+	"icon": "icon.svg",
 	"content": [{ "matches": ["*://*/*"], "js": ["content.js"], "runAt": "idle" }]
 }

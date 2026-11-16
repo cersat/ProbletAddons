@@ -1,10 +1,10 @@
 {
 	"id": "video-speed",
 	"name": "Скорость видео",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Клавиши для любого видео на сайтах: ] быстрее, [ медленнее, \\ обычная скорость, ' перемотка на 10 секунд вперёд, ; назад. Скорость запоминается.",
 	"locales": { "en": {"name": "Video Speed", "description": "Keys for any video on sites: ] faster, [ slower, \\ normal speed, ' skip 10 seconds forward, ; back. The speed is remembered."} },
-	"icon": "⏩",
+	"icon": "icon.svg",
 	"permissions": ["storage"],
 	"content": [{ "matches": ["<all_urls>"], "js": ["content.js"], "runAt": "end" }]
 }

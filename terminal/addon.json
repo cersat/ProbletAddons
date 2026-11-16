@@ -1,10 +1,10 @@
 {
 	"id": "terminal",
 	"name": "Быстрая команда",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Окошко на панели, где можно выполнить команду в системе и сразу увидеть вывод. Каждую команду браузер спросит отдельно, если не разрешить навсегда.",
 	"locales": { "en": {"name": "Quick Command", "description": "A popup on the bar where you can run a system command and see its output right away. The browser asks about every command separately unless you allow it forever.", "buttonTitle": "Run a command"} },
-	"icon": ">_",
+	"icon": "icon.svg",
 	"permissions": ["exec", "storage"],
 	"button": { "title": "Выполнить команду", "popup": "popup.html" }
 }
