@@ -11,7 +11,7 @@
 					"description": "Makes light sites dark. Turned on separately for each site; images and videos keep their own colors."
 				}
 			},
-			"icon": "🌙",
+			"icon": "icon.svg",
 			"path": "dark-sites/"
 		},
 		{
@@ -25,7 +25,7 @@
 					"description": "On long articles, shows in the corner how many minutes reading will take. Clicking hides the hint."
 				}
 			},
-			"icon": "⏱",
+			"icon": "icon.svg",
 			"path": "reading-time/"
 		},
 		{
@@ -39,7 +39,7 @@
 					"description": "Saves the open tabs as a set and reopens them with one click."
 				}
 			},
-			"icon": "🗂",
+			"icon": "icon.svg",
 			"path": "tab-sessions/"
 		},
 		{
@@ -53,7 +53,7 @@
 					"description": "Saves the text of the open page to a Markdown file: headings, lists, links, code and tables."
 				}
 			},
-			"icon": "📝",
+			"icon": "icon.svg",
 			"path": "page-markdown/"
 		},
 		{
@@ -67,7 +67,7 @@
 					"description": "Keys for any video on sites: ] faster, [ slower, \\ normal speed, ' skip 10 seconds forward, ; back. The speed is remembered."
 				}
 			},
-			"icon": "⏩",
+			"icon": "icon.svg",
 			"path": "video-speed/"
 		},
 		{
@@ -81,7 +81,7 @@
 					"description": "A popup on the bar where you can run a system command and see its output right away. The browser asks about every command separately unless you allow it forever."
 				}
 			},
-			"icon": ">_",
+			"icon": "icon.svg",
 			"path": "terminal/"
 		},
 		{
@@ -96,7 +96,7 @@
 					"buttonTitle": "Reading mode"
 				}
 			},
-			"icon": "📖",
+			"icon": "icon.svg",
 			"path": "reading-mode/"
 		},
 		{
@@ -110,7 +110,7 @@
 					"description": "When a page is JSON, shows it as a tree: collapsible blocks, type highlighting, search, copying a value or a path. The original text comes back with one button."
 				}
 			},
-			"icon": "{ }",
+			"icon": "icon.svg",
 			"path": "json-viewer/"
 		},
 		{
@@ -125,7 +125,7 @@
 					"buttonTitle": "Download images and videos"
 				}
 			},
-			"icon": "⬇",
+			"icon": "icon.svg",
 			"path": "media-download/"
 		}
 	]

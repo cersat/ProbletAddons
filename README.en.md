@@ -119,5 +119,7 @@ problet.storage.get(key) / set(key, value)   // if the storage permission is gra
 Put the addon’s folder in the repository root and add an entry to `index.json`:
 
 ```json
-{ "id": "my-addon", "name": "My addon", "version": "1.0.0", "description": "…", "locales": { "en": { "name": "My addon", "description": "…" } }, "icon": "🧩", "path": "my-addon/" }
+{ "id": "my-addon", "name": "My addon", "version": "1.0.0", "description": "…", "locales": { "en": { "name": "My addon", "description": "…" } }, "icon": "icon.svg", "path": "my-addon/" }
 ```
+
+`icon` — as in `addon.json`: an emoji or a path to an `.svg` or `.png` inside the addon’s folder.

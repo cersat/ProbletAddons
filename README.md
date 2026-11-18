@@ -119,5 +119,7 @@ problet.storage.get(key) / set(key, value)   // если есть разреше
 Положи папку аддона в корень репозитория и добавь запись в `index.json`:
 
 ```json
-{ "id": "my-addon", "name": "Мой аддон", "version": "1.0.0", "description": "…", "locales": { "en": { "name": "My addon", "description": "…" } }, "icon": "🧩", "path": "my-addon/" }
+{ "id": "my-addon", "name": "Мой аддон", "version": "1.0.0", "description": "…", "locales": { "en": { "name": "My addon", "description": "…" } }, "icon": "icon.svg", "path": "my-addon/" }
 ```
+
+`icon` — как в `addon.json`: эмодзи или путь к `.svg` или `.png` внутри папки аддона.
